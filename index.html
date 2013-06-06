@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="utf-8"> 
+<meta property="wb:webmaster" content="630acaa51e1aa12e" />
+<title>纳米黑客 namiheike.com</title>
+<link href="css/index.css"rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28550292-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<div id="divLoading">
+	<div id="divLoadingInner">
+		<img id="imgLoading" src="img/loading.gif"/>
+		<p id="pLoading">
+        	Loading<br />
+          <br />
+			这里是纳米黑客的实验室<br />
+			正在载入缺心眼的3D特效<br />
+            --其实还是不错的呦(捂脸..<br />
+            <br />
+            如果载入过慢,请直接点击:<br />
+            <br />
+		  	<a href="blog">BLOG</a>
+    	</p>
+	</div>
+</div>
+
+<div id="divFooter">
+    <p id="pFooter">
+        Powered by 纳米黑客, namiheike.com, 3d-index beta, free for noncommercial use.<br />
+        Some Rights Reserved, some material are from internet.<br />
+        Based on THREE.js 3D engine & WebGL.<br />
+        <br />
+        <span style="font-size:0.9em">辽ICP备你妹的10010952号</span>    <script language="javascript" type="text/javascript" src="http://js.users.51.la/4661808.js"></script>
+<noscript><a href="http://www.51.la/?4661808" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/4661808.asp" style="border:none" /></a></noscript>
+    </p>
+
+</div>
+
+<!--check the webgl support-->
+<script type="text/javascript">
+function isWebGLSupported() { 
+	try{ 
+		return !! window.WebGLRenderingContext && !! document.createElement( 'canvas' ).getContext('experimental-webgl' );
+	}
+	catch( e ) { return false; }
+} 
+var WebGLSupported=isWebGLSupported();
+checkWebGL();
+function checkWebGL(){
+	if (!WebGLSupported){
+		var p=document.getElementById("pLoading");
+		p.innerHTML="不好意思呢~,<br />您的浏览器不支持WebGL,<br />请直接点击进入,<br /><br /><a href='blog'>BLOG</a><br /><br /><hr /><span style='font-size:0.75em'>请使用Google Chrome,<br />FireFox 5+和safari浏览<br />做3D效果很辛苦呢<br/>看不到多可惜呀(捂脸..<br /><hr />ff用户请在about:config中<br />开启webgl.force-enabled</span>"
+	}
+}
+</script>
+
+<div id="div3dContainer"></div>
+<script type="text/javascript" src="js/Three.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js" charset="utf-8"></script>
+
+<div id="btnBlog" class="clsBtn clsDisplayNone">ENTER MY BLOG</div>
+<div id="btnGuestbk" class="clsDisplayNone">GuestBook</div>
+<div id="divGuestbk">
+	<iframe id="ifrmGuestbk"></iframe>
+    <textarea id="txtGuestbk"></textarea>
+    <button id="btnGuestbkSbmt" onClick="btnGuestbkSbmtClick()" onInput="alert('a')" disabled=true>SUBMIT</button>
+</div>
+
+</body>
+</html>
